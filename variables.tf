@@ -13,9 +13,21 @@ variable "client_secret" {
 variable "tenant_id" {
   type = string
 }
-variable "resource_group_name" {
-  type        = string
-  description = "Name of the resource group"
+// Base Information
+variable "resource_group_base_name" {
+  description = "Base name for the resource group"
+  type = string
+}
+
+variable "resource_group_name_prefix" {
+  type = string
+  default = "rg"
+  description = "Prefix for the resource group name"
+}
+
+variable "resource_group_name_suffix" {
+  type = string
+  description = "Suffix for the resource group name"
 }
 
 variable "resource_group_location" {

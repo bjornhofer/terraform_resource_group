@@ -27,6 +27,7 @@ variable "resource_group_name_prefix" {
 
 variable "resource_group_name_suffix" {
   type = string
+  default = ""
   description = "Suffix for the resource group name"
 }
 

@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "main" {
 
 data "azurerm_resource_group" "main" {
   count = var.resource_group_create == true ? 0 : 1
-  name  = var.resource_group_name
+  name  = local.resource_group_name
   provider = azurerm.resource_group
 }
 

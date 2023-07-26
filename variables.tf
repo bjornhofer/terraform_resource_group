@@ -1,3 +1,4 @@
+/*
 variable "subscription_id" {
   type = string
 }
@@ -13,6 +14,7 @@ variable "client_secret" {
 variable "tenant_id" {
   type = string
 }
+*/
 // Base Information
 variable "resource_group_base_name" {
   description = "Base name for the resource group"

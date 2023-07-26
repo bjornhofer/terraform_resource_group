@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "main" {
   name     = local.resource_group_name
   location = var.resource_group_location
   tags = var.tags
-  provider = azurerm.resource_group
+  //provider = azurerm.resource_group
   lifecycle {
     ignore_changes = [ tags ]
   }
@@ -28,7 +28,7 @@ resource "azurerm_resource_group" "main" {
 data "azurerm_resource_group" "main" {
   count = var.resource_group_create == true ? 0 : 1
   name  = local.resource_group_name
-  provider = azurerm.resource_group
+  //provider = azurerm.resource_group
 
 }
 
@@ -37,5 +37,5 @@ resource "azurerm_role_assignment" "permission" {
   scope                = azurerm_resource_group.main[0].id
   role_definition_name = each.value
   principal_id         = each.key
-  provider = azurerm.resource_group
+  //provider = azurerm.resource_group
 }

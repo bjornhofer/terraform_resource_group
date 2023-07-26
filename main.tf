@@ -17,6 +17,9 @@ resource "azurerm_resource_group" "main" {
   name     = local.resource_group_name
   location = var.resource_group_location
   provider = azurerm.resource_group
+  lifecycle {
+    ignore_changes = [ tags ]
+  }
 }
 
 data "azurerm_resource_group" "main" {
@@ -24,9 +27,7 @@ data "azurerm_resource_group" "main" {
   name  = local.resource_group_name
   tags = var.tags
   provider = azurerm.resource_group
-  lifecycle {
-    ignore_changes = [ tags ]
-  }
+
 }
 
 resource "azurerm_role_assignment" "permission" {

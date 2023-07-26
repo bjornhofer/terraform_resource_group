@@ -1,4 +1,5 @@
 
+/*
 provider "azurerm" {
   features {}
   alias = "resource_group"
@@ -7,6 +8,7 @@ provider "azurerm" {
   client_secret = var.client_secret
   tenant_id = var.tenant_id
 } 
+*/
 
 locals {
   resource_group_name = length(var.resource_group_name_suffix) > 0 ? "${var.resource_group_name_prefix}-${var.resource_group_base_name}-${var.resource_group_name_suffix}" : "${var.resource_group_name_prefix}-${var.resource_group_base_name}"

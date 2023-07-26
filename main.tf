@@ -18,9 +18,11 @@ resource "azurerm_resource_group" "main" {
   location = var.resource_group_location
   tags = var.tags
   provider = azurerm.resource_group
+  /*
   lifecycle {
     ignore_changes = [ tags ]
   }
+  */
 }
 
 data "azurerm_resource_group" "main" {

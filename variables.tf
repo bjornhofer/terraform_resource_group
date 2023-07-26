@@ -47,3 +47,9 @@ variable "resource_group_create" {
   description = "Decide wether to create or query a resource group (true: create, false: query)"
   default     = true
 }
+
+variable "tags" {
+  type = map
+  description = "map of tags"
+  default = {}
+}

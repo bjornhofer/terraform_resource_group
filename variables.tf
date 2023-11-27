@@ -43,3 +43,8 @@ variable "tags" {
   description = "map of tags"
   default = {}
 }
+
+variable "resource_group_ignore_changes" {
+  type = list
+  default = [tags]
+}

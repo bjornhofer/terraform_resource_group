@@ -20,6 +20,7 @@ variable "resource_group_name_separator" {
   type = string
   default = "-"
   description = "Separator which is used between suffix/prefix"
+}
 
 variable "resource_group_location" {
   type        = string

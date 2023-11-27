@@ -1,6 +1,6 @@
 
 locals {
-  resource_group_name = length(var.resource_group_name_suffix) > 0 ? "${var.resource_group_name_prefix}-${var.resource_group_base_name}-${var.resource_group_name_suffix}" : "${var.resource_group_name_prefix}-${var.resource_group_base_name}"
+  resource_group_name = length(var.resource_group_name_suffix) > 0 ? "${var.resource_group_name_prefix}-${var.resource_group_base_name}-${var.resource_group_name_suffix}" : length(var.resource_group_name_prefix) > 0 ? "${var.resource_group_name_prefix}-${var.resource_group_base_name} : var.resource_group_base_name"
 }
 
 resource "azurerm_resource_group" "main" {

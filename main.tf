@@ -8,9 +8,6 @@ resource "azurerm_resource_group" "main" {
   name     = local.resource_group_name
   location = var.resource_group_location
   tags = var.tags
-  lifecycle {
-    ignore_changes = var.resource_group_ignore_changes
-  }
 }
 
 data "azurerm_resource_group" "main" {

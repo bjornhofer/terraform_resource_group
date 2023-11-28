@@ -6,7 +6,7 @@ variable "resource_group_base_name" {
 
 variable "resource_group_name_prefix" {
   type = string
-  default = "rg"
+  default = ""
   description = "Prefix for the resource group name"
 }
 

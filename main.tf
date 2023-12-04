@@ -10,8 +10,3 @@ resource "azurerm_resource_group" "main" {
   location = var.resource_group_location
   tags = var.tags
 }
-
-data "azurerm_resource_group" "main" {
-  count = var.resource_group_create == true ? 0 : 1
-  name  = var.resource_group_name
-}

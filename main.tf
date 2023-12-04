@@ -13,5 +13,5 @@ resource "azurerm_resource_group" "main" {
 
 data "azurerm_resource_group" "main" {
   count = var.resource_group_create == true ? 0 : 1
-  name  = local.resource_group_name
+  name  = var.resource_group_name
 }

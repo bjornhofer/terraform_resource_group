@@ -2,6 +2,7 @@
 variable "resource_group_base_name" {
   description = "Base name for the resource group"
   type = string
+  default = ""
 }
 
 variable "resource_group_name_prefix" {
